@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/source-sans-3": "^5.2.7",
     "framer-motion": "^12.9.2",
     "hamburger-react": "^2.5.2",
     "lucide-react": "^0.507.0",
