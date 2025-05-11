@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+
+  --color-primary-dark-blue: rgba(36, 40, 63, 1);
+  --color-primary-blue: rgba(36, 40, 63, 0.87);
+  --color-primary-orange: rgba(234, 209, 132, 1);
+  --color-primary-white: rgba(255, 255, 255, 0.87);
+
+  --breakpoint-2xl: 80rem;
+}
+ 
+body {
+  @apply bg-primary-dark-blue/10 text-primary-white tracking-wider;
+  font-family: 'Source Sans Pro';
+  text-shadow: var(--text-shadow-sm);
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: lighter;
+  font-weight: 200;
+  src: url('/fonts/SourceSans3-ExtraLight.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: light;
+  font-weight: 300;
+  src: url('/fonts/SourceSans3-Light.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/SourceSans3-Regular.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: medium;
+  font-weight: 500;
+  src: url('/fonts/SourceSans3-Medium.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: medium;
+  font-weight: 600;
+  src: url('/fonts/SourceSans3-SemiBold.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: bold;
+  font-weight: 700;
+  src: url('/fonts/SourceSans3-Bold.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: bolder;
+  font-weight: 800;
+  src: url('/fonts/SourceSans3-ExtraBold.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: black;
+  font-weight: 900;
+  src: url('/fonts/SourceSans3-Black.ttf') format('truetype')
+}
