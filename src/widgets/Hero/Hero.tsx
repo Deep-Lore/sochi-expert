@@ -46,8 +46,8 @@ const MainBanner = () => {
         <h1 className="col-span-12 text-4xl/9 tracking-wide
           sm:text-4xl/9
           md:text-5xl/12
-          lg:col-span-9 lg:text-6xl/15
-          xl:col-span-9 xl:text-7xl/18
+          lg:col-span-10 lg:text-6xl/15
+          xl:col-span-10 xl:text-7xl/18
         ">
           <AnimatedBox animationType='slideInLeft'>
             <b>Инновационные</b> решения <br /> для <b>сейсмостойкого</b> строительства
