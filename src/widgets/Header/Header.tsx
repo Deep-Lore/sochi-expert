@@ -106,9 +106,7 @@ function HeaderDesktop({ className }: { className: string }) {
         <ul className="flex w-full justify-around">
           {links.map(link => (
             <ScrollLink key={link.text} id={link.id}>
-              <li
-                className="text-lg xl:text-xl font-semibold cursor-pointer hover:text-primary-orange transition-colors"
-              >
+              <li className="text-lg xl:text-xl font-semibold cursor-pointer hover:text-primary-orange transition-colors">
                 {link.text}
               </li>
             </ScrollLink>
@@ -144,7 +142,7 @@ const PhoneComponent = () => {
   return (
     <div className="col-span-2 flex justify-end items-center xl:col-span-2">
       <p
-        className="cursor-pointer flex gap-2 items-center"
+        className="cursor-pointer flex gap-1 items-center"
         onClick={copyToClipboard}
         title={isCopied ? "Номер скопирован!" : "Нажмите, чтобы скопировать"} 
       >

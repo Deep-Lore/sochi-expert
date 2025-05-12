@@ -34,7 +34,7 @@ const featureConfig: Card[] = [
     text: 'В основе системы «МИКС – Стандарт СП» лежит инновационная «Комплексная система сейсмической изоляции здания» с кинематическим принципом действия. Ключевым элементом этой системы являются «трубобетонные сейсмоизолирующие опоры», разработанные на основе патента №RU2477353 C1.  Эти опоры устанавливаются между фундаментом (или одним из нижних перекрытий) и остальной частью здания, выполняя роль мощных динамических амортизаторов. Принцип их работы основан на эффективном поглощении энергии землетрясения, позволяя зданию совершать плавные колебания, а не испытывать разрушительные нагрузки. До достижения порогового значения воздействия, пояс работает как жесткая конструкция. При превышении этого значения, опоры активируются, разделяя здание на изолированный объем и нижнюю часть. Благодаря этому, снижаются горизонтальные динамические воздействия от ускорений, что минимизирует повреждения в здании и повышает безопасность людей. Благодаря особой конструкции,  обеспечивается эффективность даже при сильных землетрясениях.  Использование  дополнительных демпфирующих приспособлений позволяет увеличить степень рассеивания энергии и сократить время затухания колебаний. "Многоразовость",  «Пороговая включаемость»,  «Нелинейность жесткости в горизонтальной плоскости»  и  «Экономичность» - вот основные преимущества нашей системы, обеспечивающие надежность и долговечность зданий в сейсмически активных регионах.',
     contentType: 'image',
     src: './column2.jpg',
-    imageWidth: 300,
+    imageWidth: 600,
   },
   {
     title: 'Сейсмостойкий каркас',
@@ -124,9 +124,9 @@ const CardListMobile = ({ config, isModalOpen, openModal, closeModal }: CardList
               </h2>
             </AnimatedBox>
 
-            <AnimatedBox animationType='slideInUp' className="relative min-h-90 flex justify-center">
+            <AnimatedBox animationType='slideInUp' className="relative min-h-40 flex justify-center">
               {element.contentType === 'image' && (
-                <Image src={element.src} alt='' width={600} height={600} style={{objectFit:"contain"}}/>
+                <Image src={element.src} alt='' width={element.imageWidth} height={element.imageWidth} style={{objectFit:"contain"}}/>
               )}
               {element.contentType === 'video' && (
                 <iframe
@@ -164,12 +164,6 @@ const CardListMobile = ({ config, isModalOpen, openModal, closeModal }: CardList
 };
 
 const CardListDesktop = ({ config, isModalOpen, openModal, closeModal }: CardList) => {
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const handleClick = () => {
-    setIsPlaying(true);
-  };
-
   return (
     <div className="flex flex-col gap-y-10 mt-25">
       {config.map((element: Card, i: number) =>
@@ -180,15 +174,17 @@ const CardListDesktop = ({ config, isModalOpen, openModal, closeModal }: CardLis
                 xl:min-h-130
               ">
                 <AnimatedBox animationType='slideInLeft' className="flex-1 flex flex-col gap-y-5">
-                  <h2 className="text-4xl font-black">{i + 1 + ". " + element.title}</h2>
+                  <h2 className="text-4xl font-black tracking-normal">{i + 1 + ". " + element.title}</h2>
                   <p className="text-lg/7 text-justify font-light whitespace-pre-line
                     xl:text-xl/9 
                   ">{element.miniText}</p>
                   <Button onClick={() => openModal(i)}>Подробнее</Button>
                 </AnimatedBox>
 
-                <AnimatedBox animationType='slideInRight' className="flex-1 relative min-h-90 flex justify-center">
-                  {element.contentType == 'image' && <Image src={element.src} alt='' width={600} height={600} />}
+                <AnimatedBox animationType='slideInRight' className="flex-1 relative min-h-90 flex justify-center items-start">
+                  {element.contentType == 'image' && 
+                    <Image src={element.src} alt='' width={element.imageWidth} height={element.imageWidth} style={{objectFit:"contain"}}/>
+                  }
                   {element.contentType == 'video' &&
                     <iframe className="absolute left-0 top-0 right-0 bottom-0 size-full"
                       src={element.src}
@@ -214,7 +210,9 @@ const CardListDesktop = ({ config, isModalOpen, openModal, closeModal }: CardLis
                 xl:min-h-130
               ">
                 <AnimatedBox animationType='slideInLeft' className="flex-1 relative min-h-90 flex justify-center">
-                  {element.contentType == 'image' && <Image src={element.src} alt='' width={600} height={600} />}
+                  {element.contentType == 'image' && 
+                    <Image src={element.src} alt='' width={element.imageWidth} height={element.imageWidth} style={{objectFit:"contain"}}/>
+                  }
                   {element.contentType == 'video' &&
                     <iframe className="absolute left-0 top-0 right-0 bottom-0 size-full"
                       src={element.src}
