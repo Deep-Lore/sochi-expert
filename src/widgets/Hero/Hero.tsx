@@ -1,4 +1,3 @@
-
 import { Feature } from './Feature';
 import { Button } from "@/shared/Button";
 import { ScrollLink } from '@/shared/ScrollLink';
