@@ -24,7 +24,7 @@ const BackgroundBanner = () => {
 
       <div className="absolute top-0 size-full z-1 grid grid-cols-12">
         <video
-          src="./video.mp4"
+          src="/video.mp4"
           className="absolute min-w-full min-h-full w-auto h-auto object-cover
             md:col-start-6 md:col-span-7
           "

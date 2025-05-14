@@ -71,7 +71,7 @@ function HeaderMobile({ isOpen, setOpen, className }: IHeaderMobile) {
     <div className={`container mx-auto px-2 size-full flex justify-between items-center sm:px-5 ${className}`}>
       <ScrollLink id='hero' className="flex items-center gap-2 cursor-pointer">
         <Image
-          src="./logo.png"
+          src="/logo.png"
           alt="Logo"
           width={40}
           height={40}
@@ -91,7 +91,7 @@ function HeaderDesktop({ className }: { className: string }) {
     <div className={`container mx-auto px-5 size-full grid-cols-12 ${className}`}>
       <ScrollLink id='hero' className='col-span-5 flex items-center gap-4 cursor-pointer'>
         <Image
-          src="./logo.png"
+          src="/logo.png"
           alt="Logo"
           width={56}
           height={56}
